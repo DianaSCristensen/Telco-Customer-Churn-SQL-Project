@@ -56,7 +56,26 @@ This section explores how different features might have influence on the churn r
   
 - **Payment method** ➡️ Customers using electronic checks have a churn rate of 45%, significantly higher than those using automatic methods like credit card or bank transfer (15–17%). This suggests that customers who are manually involved in payments may be less committed or more sensitive to pricing, which may explain the churn pattern. It could be worth looking into ways to encourage more customers to switch to automatic payments. 
   
-- **Tech support** ➡️ Customers with tech support churn 27% less than those without. This indicate that having customer service plays a role for customer retention. 
+- **Tech support** ➡️ Customers with tech support churn 27% less than those without. This indicates that having customer service plays a role for customer retention. Especially considering that customers without internet service (and therefore no tech support) show a very low churn rate of 0.7%.
+
+**Churn rate by tenure, tech support, and partnership status**
+
+| Tenure group   | Tech support         | Partner | Churn rate |
+| :---:          |        :---:         |  :---:  |    :---:   |
+| Under 1 year   | No                   | No      | 62%        |
+| Under 1 year   | Yes                  | Yes     | 46%        |
+| 1-2 years      | No                   | No      | 42%        |
+| 1-2 years      | Yes                  | No      | 30%        |
+| 1-2 years      | Yes                  | Yes     | 25%        |
+| 2+ years       | No                   | No      | 27%        |
+| 2+ years       | Yes                  | Yes     | 8%         |
+| 2+ years       |*No internet service* | No      | 2%         |
+
+*Please note*, as gender was previously found not to significantly influence churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership.
+
+- For customer in tenure group 2+ years, churn drops even further to just 0.1% for customers in this group who also have a partner, suggesting that even among low-risk segments, relationship status might still play a role.
+  
+- It is worth mentioning that after analyzing churn rates across tenure groups, customers with both tech support and a partner generally show lower churn rates. However, there is one exception; in the 'Under 1 year' group, even customers with both still churn at 46%. This might indicate that newer customers may be at higher risk regardless of tech support or relationship status, most likely due to limited time for loyalty or satisfaction to build. (should be more in the end)
   
 
 

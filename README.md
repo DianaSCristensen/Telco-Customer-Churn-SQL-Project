@@ -22,6 +22,8 @@ The dataset contains 7,043 customer with 21 columns related to bla bla bla:
   
 ### 🔎 Column overview
 
+- 
+
 *Make a table with a overview*
 
 ## :bar_chart: EDA 
@@ -71,11 +73,19 @@ This section explores how different features might have influence on the churn r
 | 2+ years       | Yes                  | Yes     | 8%         |
 | 2+ years       |*No internet service* | No      | 2%         |
 
-*Please note*, as gender was previously found not to significantly influence churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership.
+*Please note: This table shows a selection of the most relevant combinations. The full results from the SQL query can be found* 
+
+As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status. Below are the key findings from this churn rate breakdown:
+
+- Based on analyse it appears that tenure is one of the strongest indicators of churn, with shorter-tenure customers showing significantly higher churn rates. Tech support (or lack of internet service) and partnership status also play important roles, often helping reduce churn, especially for longer-tenured customers.
+
+- Customers with both tech support and a partner generally show lower churn rates. However, there is one exception; in the 'Under 1 year' group, even customers with both still churn at 46%, while customer in this group with tech support and no parther showed churn rate at 35%. This might indicate that newer customers may be at higher risk regardless of tech support or relationship status, most likely due to limited time for loyalty or satisfaction to build.
 
 - For customer in tenure group 2+ years, churn drops even further to just 0.1% for customers in this group who also have a partner, suggesting that even among low-risk segments, relationship status might still play a role.
   
-- It is worth mentioning that after analyzing churn rates across tenure groups, customers with both tech support and a partner generally show lower churn rates. However, there is one exception; in the 'Under 1 year' group, even customers with both still churn at 46%. This might indicate that newer customers may be at higher risk regardless of tech support or relationship status, most likely due to limited time for loyalty or satisfaction to build. (should be more in the end)
-  
+This overall pattern suggests that reducing churn is not just about one factor alone, but rather a combination of customer tenure, support access, and relationship context. Customers tend to become more stable over time, and features like tech support and having a partner seem to strengthen that stability, especially after the first year.
+
+## ➡️ Next steps
+With these insights in hand, the next step in this project is to build a neural network model to predict customer churn. Part 2 will focus on preparing the data, training the model, and evaluating how well it can identify customers at risk of leaving. Part 2 is currently still in progress but can be found here (insert link from above, to the readme part 2)
 
 

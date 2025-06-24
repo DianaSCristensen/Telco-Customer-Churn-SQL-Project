@@ -73,7 +73,7 @@ This section explores how different features might have influence on the churn r
   
 - **Tech support** ➡️ Customers with tech support churn 27% less than those without, indicating that access to support plays a role in retention. Especially, customers without internet service (and therefore no tech support) show an extremely low churn rate of just 0.7%.
 
-**Churn rate by tenure, tech support, and partnership status**
+:microscope: **Churn rate by tenure, tech support, and partnership status**
 
 | Tenure group   | Tech support         | Partner | Churn rate |
 | :---:          |        :---:         |  :---:  |    :---:   |
@@ -88,7 +88,7 @@ This section explores how different features might have influence on the churn r
 
 *Please note: This table shows a selection of the most relevant combinations. The full results from the SQL query can be found [here](SQL/Churn_by_tenure_techsupport_partner.sql).* 
 
-As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status. Below are the key findings from this churn rate breakdown:
+As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status. Below are the key findings:
 
 - Based on the analysis it appears that tenure is one of the strongest indicators of churn, with shorter-tenure customers showing significantly higher churn rates. Tech support (or lack of internet service) and partnership status also play important roles, often helping reduce churn, especially for longer-tenured customers.
 

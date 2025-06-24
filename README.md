@@ -15,8 +15,8 @@ The dataset contains 7,043 customer with 21 columns:
 
 - Loaded raw data as VARCHAR (string) 
 - Identified and removed blank spaces ➡️ from `TotalCharges` 11 rows was dropped
-- Converted `TotalCharges` and `MonthlyCharges` to numeric values ➡️ `DECIMAL`
-- Converted `SeniorCitizen` to binary numeric  ➡️ `TINYINT(1)`
+- Converted `TotalCharges` and `MonthlyCharges` to numeric values ➡️ DECIMAL
+- Converted `SeniorCitizen` to binary numeric  ➡️ TINYINT(1)
   
 *Please note, 11 rows with missing TotalCharges were dropped for the SQL EDA but in the ML phase, these rows will be re-evaluated.*
   

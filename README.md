@@ -47,11 +47,11 @@ Out of all the customers, 26.6% (1,869 out of 7,032) have churned, meaning nearl
 
 
 **Revenue lost by churned contracts**
-| Contract type | Revenue lost (USD)  | Total revenue (USD)|   Revenue lost %   | Churn rate %   |       
-|    :---:      |        :---:        |     :---:          |      :---:         |     :---:      |
-| Month to month|     1,927,182.25    |   5,305,861.50     |       36.32        |      43.0      |
-| One year      |     260,753.45      |   4,467,053.50     |       15.11        |      11.0      |
-| Two year      |     674,991.20      |   6,283,253.70     |        4.15        |       0.3      |
+| Contract type | Revenue lost (USD)  | Total revenue (USD)|   Revenue lost %   | Churn rate  |       
+|    :---:      |        :---:        |     :---:          |      :---:         |     :---:   |
+| Month to month|     1,927,182.25    |   5,305,861.50     |       36.32        |      43.0%  |
+| One year      |     260,753.45      |   4,467,053.50     |       15.11        |      11.0%  |
+| Two year      |     674,991.20      |   6,283,253.70     |        4.15        |       0.3%  |
 
 #### 💸 Revenue impact by contract type
 

@@ -1,6 +1,4 @@
--- =======================
 -- 1. CREATE & LOAD TABLE
--- =======================
 
 CREATE TABLE telco_data ( 
   customerID VARCHAR(50),
@@ -29,9 +27,9 @@ CREATE TABLE telco_data (
 -- Dataset from Kaggle (https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 -- Data manually imported into MySQL Workbench and inserted into the telco_data table.
 
--- =======================================
+
 -- 2. Checked, dropped & updated the table
--- =======================================
+
 
 -- Ran NULL/blank checks on several columns; only TotalCharges had missing values:
 SELECT * FROM telco_data
@@ -72,9 +70,9 @@ SELECT TotalCharges FROM telco_data LIMIT 100;
 
 SELECT customerID FROM telco_data LIMIT 100;
 
--- ===========
+
 -- 3. EDA
--- ===========
+
 
 -- The following queries explore churn patterns based on different variables like 
 -- gender, contract type, tech support, tenure, payment method, and more.

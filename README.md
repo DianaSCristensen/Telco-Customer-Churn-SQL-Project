@@ -11,9 +11,9 @@ This project analyzes customer churn behavior in the telecom industry, data prov
 <a href="Github link"> Name of project, pro something like Telco Customer Churn - ML Project (part 2) </a>
 
 ## 🧹 Data cleaning
-The dataset contains 7,043 customer with 21 columns related to bla bla bla:
+The dataset contains 7,043 customer with 21 columns:
 
-- Loaded raw data as VARCHAR
+- Loaded raw data as VARCHAR (string) 
 - Identified and removed blank spaces ➡️ from `TotalCharges` 11 rows was dropped
 - Converted `TotalCharges` and `MonthlyCharges` to numeric values ➡️ `DECIMAL`
 - Converted `SeniorCitizen` to binary numeric  ➡️ `TINYINT(1)`
@@ -22,9 +22,22 @@ The dataset contains 7,043 customer with 21 columns related to bla bla bla:
   
 ### 🔎 Column overview
 
-- 
-
-*Make a table with a overview*
+- **Customer ID**: Unique customer identifier, combined with numbers and letters. 
+- **Gender**: Gender of the customer (*Female*/*Male*)
+- **Senior citizens**: Binary indicator where *1* means the customer is a senior, and *0* means they are not.
+- **Partner**: Whether the customer has a partner (*Yes*/*No*)
+- **Tenure**: Showing the number of months the customer has been with the company. 
+- **Phone Service**: Showing if the customer has phone service (*Yes*/*No*).
+- **Multiple lines**: If the customer has multiple phone lines (*Yes*, *No*, or *No phone service*)
+- **Internet Service**: Type of internet service (*DSL*, *Fiber optic*, or *No*).
+- **Online Security, Online Backup, Device Protection, Tech Support, Streaming TV, StreamingMovies**: \
+  Showing if the customer has each respective service (*Yes*, *No*, or *No internet service*).
+- **Contract**: Contract type (*Month-to-month*, *One year*, or *Two year*).
+- **Paperless billing**: Showing whether the customer receives paperless billing (*Yes*/*No*).
+- **Payment method**: How the customer pays (*Electronic check*, *Mailed check*, *Bank transfer (automatic)*, or *Credit card (automatic)*).
+- **Monthly charges**: The amount charged to the customer each month.
+- **Total charges**: Total amount billed to the customer to date.
+- **Churn**: Showing whether the customer has left the company (*Yes*/*No*).
 
 ## :bar_chart: EDA 
 
@@ -50,7 +63,7 @@ Out of all the customers, 26.6% (1,869 out of 7,032) have churned, meaning nearl
 
 ### :chart_with_downwards_trend: Churn risk factors
 
-This section explores how different features might have influence on the churn risk such as payment method, tech support, gender, tenure, and partnership status. 
+This section explores how different features might have influence on the churn risk such as gender, partnership, payment method, tech support, senior citizen, and tenure. 
 
 - **Gender** ➡️ The churn rates are nearly identical between men and women (26–27%), suggesting gender is not a strong churn indicator in this dataset.
   
@@ -58,7 +71,7 @@ This section explores how different features might have influence on the churn r
   
 - **Payment method** ➡️ Customers using electronic checks have a churn rate of 45%, significantly higher than those using automatic methods like credit card or bank transfer (15–17%). This suggests that customers who are manually involved in payments may be less committed or more sensitive to pricing, which may explain the churn pattern. It could be worth looking into ways to encourage more customers to switch to automatic payments. 
   
-- **Tech support** ➡️ Customers with tech support churn 27% less than those without. This indicates that having customer service plays a role for customer retention. Especially considering that customers without internet service (and therefore no tech support) show a very low churn rate of 0.7%.
+- **Tech support** ➡️ Customers with tech support churn 27% less than those without, indicating that access to support plays a role in retention. Especially, customers without internet service (and therefore no tech support) show an extremely low churn rate of just 0.7%.
 
 **Churn rate by tenure, tech support, and partnership status**
 
@@ -77,13 +90,15 @@ This section explores how different features might have influence on the churn r
 
 As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status. Below are the key findings from this churn rate breakdown:
 
-- Based on analyse it appears that tenure is one of the strongest indicators of churn, with shorter-tenure customers showing significantly higher churn rates. Tech support (or lack of internet service) and partnership status also play important roles, often helping reduce churn, especially for longer-tenured customers.
+- Based on the analysis it appears that tenure is one of the strongest indicators of churn, with shorter-tenure customers showing significantly higher churn rates. Tech support (or lack of internet service) and partnership status also play important roles, often helping reduce churn, especially for longer-tenured customers.
 
-- Customers with both tech support and a partner generally show lower churn rates. However, there is one exception; in the 'Under 1 year' group, even customers with both still churn at 46%, while customer in this group with tech support and no parther showed churn rate at 35%. This might indicate that newer customers may be at higher risk regardless of tech support or relationship status, most likely due to limited time for loyalty or satisfaction to build.
+- Customers with both tech support and a partner generally show lower churn rates. However, there is one exception; in the 'Under 1 year' group, even customers with both still churn at 46%, while customers in this group with tech support and no partner showed churn rate at 35%. This might indicate that newer customers may be at higher risk regardless of tech support or relationship status, most likely due to limited time for loyalty or satisfaction to build.
 
-- For customer in tenure group 2+ years, churn drops even further to just 0.1% for customers in this group who also have a partner, suggesting that even among low-risk segments, relationship status might still play a role.
+- For customers in the 2+ years tenure group, churn drops even further to just 0.1% for customers in this group who also have a partner, suggesting that even among low-risk segments, relationship status might still play a role.
   
 This overall pattern suggests that reducing churn is not just about one factor alone, but rather a combination of customer tenure, support access, and relationship context. Customers tend to become more stable over time, and features like tech support and having a partner seem to strengthen that stability, especially after the first year.
+
+While the main analysis highlights tenure, tech support, and partnership status, other features also appear to influence churn. For example, customers with **dependents** have a significantly lower churn rate (16%) than those without (31%), and **senior citizens** churn at a higher rate (42%) compared to non-senior customers (24%). These trends, although not explored in full detail here, may be worth deeper investigation or testing in the predictive model (part 2).
 
 ## ➡️ Next steps
 With these insights in hand, the next step in this project is to build a neural network model to predict customer churn. Part 2 will focus on preparing the data, training the model, and evaluating how well it can identify customers at risk of leaving. Part 2 is currently still in progress but can be found here (insert link from above, to the readme part 2)

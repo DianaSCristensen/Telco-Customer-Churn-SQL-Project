@@ -1,4 +1,4 @@
-# :phone: Telco Customer Churn - SQL project (part 1)
+# :phone: Telco Customer Churn - SQL Project (Part 1)
 
 This project analyzes customer churn behavior in the telecom industry, data provided by Kaggle. The project is split into two parts, first part I used SQL on the Telco Customer Churn dataset, where the goal was to clean the dataset, explore patterns related to churn and customer behavior. The second part will involve building a Neural Network and make prediction on Churn.
 

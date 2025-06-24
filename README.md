@@ -5,8 +5,8 @@ This project analyzes customer churn behavior in the telecom industry, data prov
 - 📂 The dataset used in this project is available via Kaggle: \
  <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn"> Telco Customer Churn - BlastChar </a>
 - 🛠️ Tools used MySQL, DbGate and MySQL Workbench
-- 📗 All code can be seen in the SQL folder \
-  (hyperlink to the folder in GitHub )
+- 📗 All code can be seen in the SQL folder: \
+  [Complete analysis](SQL/complete_analysis.sql)
 - (emoji) 2nd part of the project is still in progress, will be published here (hyperlink to README for part 2, it will be blank with a header and saying brief project details and status in progress) \
 <a href="Github link"> Name of project, pro something like Telco Customer Churn - ML Project (part 2) </a>
 
@@ -55,7 +55,7 @@ Out of all the customers, 26.6% (1,869 out of 7,032) have churned, meaning nearl
 
 #### 💸 Revenue impact by contract type
 
-- From the tables above, it can be seen that **Month to month contracts**, which have a high churn rate of 43%, and they represent a significant 36.3% loss related to the total revenue in that group, a revenue loss of $1.93M. This aligns with expectations, as shorter-term contracts typically have less customer commitment. This group is likely more flexible, easier to churn, and may require better retention strategies. 
+- From the tables above ([SQL query](SQL/Revenue_lost.sql)), it can be seen that **Month to month contracts**, which have a high churn rate of 43%, and they represent a significant 36.3% loss related to the total revenue in that group, a revenue loss of $1.93M. This aligns with expectations, as shorter-term contracts typically have less customer commitment. This group is likely more flexible, easier to churn, and may require better retention strategies. 
 
 - **One year contracts** are more stable, with a churn rate of 11%, yet still lose 15.11% of their revenue to churn. This suggests that while the risk is lower, there is still room for improvement such as maybe a loyalty program with loyalty offers. 
 
@@ -86,7 +86,7 @@ This section explores how different features might have influence on the churn r
 | 2+ years       | Yes                  | Yes     | 8%         |
 | 2+ years       |*No internet service* | No      | 2%         |
 
-*Please note: This table shows a selection of the most relevant combinations. The full results from the SQL query can be found* 
+*Please note: This table shows a selection of the most relevant combinations. The full results from the SQL query can be found [here](SQL/Churn_by_tenure_techsupport_partner.sql).* 
 
 As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status. Below are the key findings from this churn rate breakdown:
 

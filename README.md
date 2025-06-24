@@ -2,14 +2,14 @@
 
 This project analyzes customer churn behavior in the telecom industry, data provided by Kaggle. The project is split into two parts, first part I used SQL on the Telco Customer Churn dataset, where the goal was to clean the dataset, explore patterns related to churn and customer behavior. The second part will involve building a Neural Network and make prediction on churn.
 
-- 📂 The dataset used in this project is available via Kaggle: \
+- 📂 Dataset used in this project is available via Kaggle: \
  <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn"> Telco Customer Churn - BlastChar </a>
-- 🛠️ Tools used MySQL, DbGate and MySQL Workbench
-- 📗 All code can be seen in the SQL folder: \
+- 🛠️ Tools used: MySQL, DbGate and MySQL Workbench
+- 📗 Full SQL code can be found in the SQL folder: \
   [Complete analysis](SQL/complete_analysis.sql)
-- (emoji) 2nd part of the project is still in progress, will be published here (hyperlink to README for part 2, it will be blank with a header and saying brief project details and status in progress) \
-<a href="Github link"> Name of project, pro something like Telco Customer Churn - ML Project (part 2) </a>
-
+- :pushpin: Part 2 of the project is still in progress, but will be posted here:\
+[Telco Customer Churn - ML Project (Part 2)](https://github.com/DianaSCristensen/Telco-Customer-Churn-ML-Project)
+  
 ## 🧹 Data cleaning
 The dataset contains 7,043 customer with 21 columns:
 
@@ -55,7 +55,7 @@ Out of all the customers, 26.6% (1,869 out of 7,032) have churned, meaning nearl
 
 #### 💸 Revenue impact by contract type
 
-- From the tables above ([SQL query](SQL/Revenue_lost.sql)), it can be seen that **Month to month contracts**, which have a high churn rate of 43%, and they represent a significant 36.3% loss related to the total revenue in that group, a revenue loss of $1.93M. This aligns with expectations, as shorter-term contracts typically have less customer commitment. This group is likely more flexible, easier to churn, and may require better retention strategies. 
+- From the tables above ([see the SQL query](SQL/Revenue_lost.sql)), it can be seen that **Month to month contracts**, which have a high churn rate of 43%, and they represent a significant 36.3% loss related to the total revenue in that group, a revenue loss of $1.93M. This aligns with expectations, as shorter-term contracts typically have less customer commitment. This group is likely more flexible, easier to churn, and may require better retention strategies. 
 
 - **One year contracts** are more stable, with a churn rate of 11%, yet still lose 15.11% of their revenue to churn. This suggests that while the risk is lower, there is still room for improvement such as maybe a loyalty program with loyalty offers. 
 
@@ -101,6 +101,6 @@ This overall pattern suggests that reducing churn is not just about one factor a
 While the main analysis highlights tenure, tech support, and partnership status, other features also appear to influence churn. For example, customers with **dependents** have a significantly lower churn rate (16%) than those without (31%), and **senior citizens** churn at a higher rate (42%) compared to non-senior customers (24%). These trends, although not explored in full detail here, may be worth deeper investigation or testing in the predictive model (part 2).
 
 ## ➡️ Next steps
-With these insights in hand, the next step in this project is to build a neural network model to predict customer churn. Part 2 will focus on preparing the data, training the model, and evaluating how well it can identify customers at risk of leaving. Part 2 is currently still in progress but can be found here (insert link from above, to the readme part 2)
+With these insights in hand, the next step in this project is to build a neural network model to predict customer churn. Part 2 will focus on preparing the data, training the model, and evaluating how well it can identify customers at risk of leaving. Part 2 is currently still in progress but can be found [here](https://github.com/DianaSCristensen/Telco-Customer-Churn-ML-Project).
 
 

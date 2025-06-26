@@ -13,19 +13,19 @@ This project analyzes customer churn behavior in the telecom industry, data prov
 ## 🧹 Data cleaning
 The dataset contains 7,043 customer with 21 columns:
 
-- Loaded raw data as VARCHAR (string) 
-- Identified and removed blank spaces ➡️ from `TotalCharges` 11 rows was dropped
-- Converted `TotalCharges` and `MonthlyCharges` to numeric values ➡️ DECIMAL
-- Converted `SeniorCitizen` to binary numeric  ➡️ TINYINT(1)
+- Loaded raw data as VARCHAR.
+- Identified and removed blank spaces ➡️ from `TotalCharges` 11 rows was dropped.
+- Converted `TotalCharges` and `MonthlyCharges` to numeric values ➡️ DECIMAL.
+- Converted `SeniorCitizen` to binary numeric  ➡️ TINYINT(1).
   
-*Please note, 11 rows with missing TotalCharges were dropped for the SQL EDA but in the ML phase, these rows will be re-evaluated.*
+*Please note, 11 rows with missing TotalCharges were dropped for the SQL EDA but in the ML phase (part 2), these rows will be re-evaluated.*
   
 ### 🔎 Column overview
 
 - **Customer ID**: Unique customer identifier, combined with numbers and letters. 
 - **Gender**: Gender of the customer (*Female*/*Male*)
 - **Senior citizens**: Binary indicator where *1* means the customer is a senior, and *0* means they are not.
-- **Partner**: Whether the customer has a partner (*Yes*/*No*)
+- **Partner**: Showing if the customer has a partner (*Yes*/*No*)
 - **Tenure**: Showing the number of months the customer has been with the company. 
 - **Phone Service**: Showing if the customer has phone service (*Yes*/*No*).
 - **Multiple lines**: If the customer has multiple phone lines (*Yes*, *No*, or *No phone service*)

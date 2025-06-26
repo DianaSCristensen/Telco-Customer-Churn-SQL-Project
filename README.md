@@ -63,7 +63,7 @@ Out of all the customers, 26.6% (1,869 out of 7,032) have churned, meaning nearl
 
 ### :chart_with_downwards_trend: Churn risk factors
 
-This section explores how different features might have influence on the churn risk such as gender, partnership, payment method, tech support, senior citizen, and tenure. 
+This section explores how different features might have influence on the churn risk such as gender, partnership, payment method, tech support and tenure. 
 
 - **Gender** ➡️ The churn rates are nearly identical between men and women (26–27%), suggesting gender is not a strong churn indicator in this dataset.
   
@@ -98,7 +98,7 @@ As gender was previously found not to have a significant influence on churn, it 
   
 This overall pattern suggests that reducing churn is not just about one factor alone, but rather a combination of customer tenure, support access, and relationship context. Customers tend to become more stable over time, and features like tech support and having a partner seem to strengthen that stability, especially after the first year.
 
-While the main analysis highlights tenure, tech support, and partnership status, other features also appear to influence churn. For example, customers with **dependents** have a significantly lower churn rate (16%) than those without (31%), and **senior citizens** churn at a higher rate (42%) compared to non-senior customers (24%). These trends, although not explored in full detail here, may be worth deeper investigation or testing in the predictive model (part 2).
+While the main analysis highlights tenure, tech support, and partnership status, other features also appear to influence churn. For example, customers with **dependents** have a significantly lower churn rate (16%) than those without (31%), and **senior citizens** churn at a higher rate (42%) compared to non-senior customers (24%). Although these trends aren't explored in full detail here, they may be worth deeper investigation in Part 2 of this project, where the focus will be on predicting customer churn.
 
 ## ➡️ Next steps
 With these insights in hand, the next step in this project is to build a neural network model to predict customer churn. Part 2 will focus on preparing the data, training the model, and evaluating how well it can identify customers at risk of leaving. Part 2 is currently still in progress but can be found [here](https://github.com/DianaSCristensen/Telco-Customer-Churn-ML-Project).

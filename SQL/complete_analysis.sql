@@ -1,6 +1,6 @@
 -- 1. CREATE & LOAD TABLE
 
-CREATE TABLE telco_data ( 
+CREATE TABLE telco_data (
   customerID VARCHAR(50),
   gender VARCHAR(10),
   SeniorCitizen VARCHAR(5),

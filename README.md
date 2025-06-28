@@ -11,7 +11,7 @@ This project analyzes customer churn behavior in the telecom industry, data prov
 [Telco Customer Churn - ML Project (Part 2)](https://github.com/DianaSCristensen/Telco-Customer-Churn-ML-Project)
   
 ## 🧹 Data cleaning
-The dataset contains 7,043 customer with 21 columns:
+The dataset contains 7,043 customers with 21 columns:
 
 - Loaded raw data as VARCHAR.
 - Identified and removed blank spaces ➡️ from `TotalCharges` 11 rows was dropped.
@@ -59,8 +59,8 @@ Out of all the customers, 26.6% (1,869 out of 7,032) have churned, meaning nearl
 
 - **One year contracts** are more stable, with a churn rate of 11%, yet still lose 15.11% of their revenue to churn. This suggests that while the risk is lower, there is still room for improvement such as maybe a loyalty program with loyalty offers. 
 
-- **Two year contracts** have a very low churn rate of just 0.3%, are the most stable and are responsible for only a 4.15% revenue loss. These customers are likely more committed, and the company may consider leveraging this group to build long-term value or encourage upgrades.
-
+- **Two year contracts** are the most stable, with a churn rate of just 0.3%, and are responsible for only a 4.15% revenue loss. These customers are likely more committed, and the company might consider exploring ways to encourage upgrades within this group.
+ 
 ### :chart_with_downwards_trend: Churn risk factors
 
 This section explores how different features might have influence on the churn risk such as gender, partnership, payment method, tech support and tenure. 
@@ -69,7 +69,7 @@ This section explores how different features might have influence on the churn r
   
 - **Partnership** ➡️ Customers with a partner have a 13–14% lower churn rate compared to those without, regardless of gender, which suggest that relationship status is associated with higher customer retention. 
   
-- **Payment method** ➡️ Customers using electronic checks have a churn rate of 45%, significantly higher than those using automatic methods like credit card or bank transfer (15–17%). This suggests that customers who are manually involved in payments may be less committed or more sensitive to pricing, which may explain the churn pattern. It could be worth looking into ways to encourage more customers to switch to automatic payments. 
+- **Payment method** ➡️ Customers using electronic checks have a churn rate of 45%, significantly higher than those using automatic methods like credit card or bank transfer (15–17%). The company might benefit by looking into ways to encourage more customers to switch to automatic payments. 
   
 - **Tech support** ➡️ Customers with tech support churn 27% less than those without, indicating that access to support plays a role in retention. Especially, customers without internet service (and therefore no tech support) show an extremely low churn rate of just 0.7%.
 
@@ -88,7 +88,7 @@ This section explores how different features might have influence on the churn r
 
 *Please note: This table only shows a selection of the most relevant combinations. The full results from the SQL query can be found [here](SQL/Churn_by_tenure_techsupport_partner.sql).* 
 
-As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status. Below are the key findings:
+As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status:
 
 - Based on the analysis it appears that tenure is one of the strongest indicators of churn; Shorter tenure customers showing significantly higher churn rates. Tech support (or no internet service) and partnership status also play important roles, often help reduce churn, especially for longer tenured customers.
 

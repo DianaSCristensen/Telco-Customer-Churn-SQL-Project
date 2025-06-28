@@ -33,11 +33,11 @@ The dataset contains 7,043 customer with 21 columns:
 - **Online Security, Online Backup, Device Protection, Tech Support, Streaming TV, StreamingMovies**: \
   Showing if the customer has each respective service (*Yes*, *No*, or *No internet service*).
 - **Contract**: Contract type (*Month-to-month*, *One year*, or *Two year*).
-- **Paperless billing**: Showing whether the customer receives paperless billing (*Yes*/*No*).
+- **Paperless billing**: Showing if the customer receives paperless billing (*Yes*/*No*).
 - **Payment method**: How the customer pays (*Electronic check*, *Mailed check*, *Bank transfer (automatic)*, or *Credit card (automatic)*).
-- **Monthly charges**: The amount charged to the customer each month.
+- **Monthly charges**: The amount the customer is billed each month.
 - **Total charges**: Total amount billed to the customer to date.
-- **Churn**: Showing whether the customer has left the company (*Yes*/*No*).
+- **Churn**: Showing if the customer has left the company (*Yes*/*No*).
 
 ## :bar_chart: EDA 
 
@@ -86,21 +86,19 @@ This section explores how different features might have influence on the churn r
 | 2+ years       | Yes                  | Yes     | 8%         |
 | 2+ years       |*No internet service* | No      | 2%         |
 
-*Please note: This table shows a selection of the most relevant combinations. The full results from the SQL query can be found [here](SQL/Churn_by_tenure_techsupport_partner.sql).* 
+*Please note: This table only shows a selection of the most relevant combinations. The full results from the SQL query can be found [here](SQL/Churn_by_tenure_techsupport_partner.sql).* 
 
 As gender was previously found not to have a significant influence on churn, it was excluded from this analysis to better highlight the impact of tenure, tech support, and partnership status. Below are the key findings:
 
-- Based on the analysis it appears that tenure is one of the strongest indicators of churn, with shorter-tenure customers showing significantly higher churn rates. Tech support (or lack of internet service) and partnership status also play important roles, often helping reduce churn, especially for longer-tenured customers.
+- Based on the analysis it appears that tenure is one of the strongest indicators of churn; Shorter tenure customers showing significantly higher churn rates. Tech support (or no internet service) and partnership status also play important roles, often help reduce churn, especially for longer tenured customers.
 
-- Customers with both tech support and a partner generally show lower churn rates. However, there is one exception; in the 'Under 1 year' group, even customers with both still churn at 46%, while customers in this group with tech support and no partner showed churn rate at 35%. This might indicate that newer customers may be at higher risk regardless of tech support or relationship status, most likely due to limited time for loyalty or satisfaction to build.
+- Customers with both tech support and a partner generally show lower churn rates. However, there is one exception; in the 'Under 1 year' group, even customers with both still churn at 46%, while customers in this group with tech support and no partner showed churn rate at 35%. This might indicate that newer customers may be at higher risk regardless of tech support or relationship status, which could be due to limited time for loyalty or satisfaction to build.
 
-- For customers in the 2+ years tenure group, churn drops even further to just 0.1% for customers in this group who also have a partner, suggesting that even among low-risk segments, relationship status might still play a role.
+- For customers in the 2+ years tenure group, churn drops even further to just 0.1% for customers in this group who also have a partner, suggesting that even among low-risk segments, relationship status seems to still play a role.
   
-This overall pattern suggests that reducing churn is not just about one factor alone, but rather a combination of customer tenure, support access, and relationship context. Customers tend to become more stable over time, and features like tech support and having a partner seem to strengthen that stability, especially after the first year.
+This overall pattern suggests that reducing churn is not just about one factor alone, but rather a combination of customer tenure, customer support, and relationship. Customers tend to become more stable over time, and features like tech support and having a partner seem to strengthen that stability, especially after the first year.
 
 While the main analysis highlights tenure, tech support, and partnership status, other features also appear to influence churn. For example, customers with **dependents** have a significantly lower churn rate (16%) than those without (31%), and **senior citizens** churn at a higher rate (42%) compared to non-senior customers (24%). Although these trends aren't explored in full detail here, they may be worth deeper investigation in Part 2 of this project, where the focus will be on predicting customer churn.
 
 ## ➡️ Next steps
-With these insights in hand, the next step in this project is to build a neural network model to predict customer churn. Part 2 will focus on preparing the data, training the model, and evaluating how well it can identify customers at risk of leaving. Part 2 is currently still in progress but can be found [here](https://github.com/DianaSCristensen/Telco-Customer-Churn-ML-Project).
-
-
+The next step in this project is to build a neural network model to predict customer churn. Part 2 will focus on preparing the data, training the model, and evaluating how well it can identify customers risk of leaving. Part 2 is currently still in progress but can be found [here](https://github.com/DianaSCristensen/Telco-Customer-Churn-ML-Project).

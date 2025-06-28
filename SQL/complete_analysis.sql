@@ -39,7 +39,11 @@ WHERE TRIM(TotalCharges) = '' OR TotalCharges IS NULL; -- 11 rows.
 DELETE FROM telco_data
 WHERE TRIM(TotalCharges) = '' OR TotalCharges IS NULL; 
 
--- Additional checks (examples shown below returned 0 rows):
+-- Additional checks (examples shown below returned 0 rows): 
+
+SELECT * FROM telco_data
+WHERE TRIM(customerID) = '' OR customerID IS NULL; -- 0 rows
+
 SELECT * FROM telco_data
 WHERE TRIM(PaymentMethod) = '' OR PaymentMethod IS NULL; -- 0 rows
 
@@ -47,10 +51,10 @@ SELECT * FROM telco_data
 WHERE TRIM(InternetService) = '' OR InternetService IS NULL; -- 0 rows
 
 SELECT DISTINCT(gender) 
-FROM telco_data; -- Stored as: Female and Male
+FROM telco_data; -- Stored as: Female/Male
 
 SELECT DISTINCT(SeniorCitizen)
-FROM telco_data; -- binary numerical: 0 = Not a senior, 1 = Senior
+FROM telco_data; -- binary numerical: 0 = not a senior, 1 = senior
 
 SELECT DISTINCT(Dependents) 
 FROM telco_data; -- Stored as: Yes/No 
@@ -64,11 +68,7 @@ MODIFY COLUMN SeniorCitizen TINYINT(1); -- SeniorCitizen changed to binary numer
 
 DESCRIBE telco_data;
 
-SELECT * FROM telco_data LIMIT 10;
-
-SELECT TotalCharges FROM telco_data LIMIT 100;
-
-SELECT customerID FROM telco_data LIMIT 100;
+SELECT * FROM telco_data LIMIT 20;
 
 
 -- 3. EDA
@@ -128,7 +128,7 @@ SELECT Churn,
 FROM telco_data
 GROUP BY Churn;
 
--- Churn rate by Payment Method
+-- Churn rate by payment method
 WITH payment_churn AS (
   SELECT 
     PaymentMethod,
@@ -141,7 +141,7 @@ WITH payment_churn AS (
 SELECT * FROM payment_churn
 ORDER BY churn_percentage DESC;
 
--- Churn rate by TechSupport
+-- Churn rate by tech support
 SELECT 
     TechSupport,
     SUM(IF(Churn = 'Yes', 1, 0)) AS churned_customers,
@@ -149,7 +149,7 @@ SELECT
 FROM telco_data
 GROUP BY TechSupport;
 
--- churn rate by Dependents
+-- churn rate by dependents
 SELECT 
     Dependents,
     SUM(IF(Churn = 'Yes', 1, 0)) AS churned_customers,
@@ -157,7 +157,7 @@ SELECT
 FROM telco_data
 GROUP BY Dependents;
 
--- churn rate by SeniorCitizen
+-- churn rate by senior citizen
 SELECT 
     SeniorCitizen,
     SUM(IF(Churn = 'Yes', 1, 0)) AS churned_customers,
@@ -165,7 +165,7 @@ SELECT
 FROM telco_data
 GROUP BY SeniorCitizen;
     
--- Create tenure group and analyze churn:
+-- Creating tenure group and analyze churn:
 SELECT 
   CASE 
     WHEN tenure < 12 THEN 'Under 1 year'

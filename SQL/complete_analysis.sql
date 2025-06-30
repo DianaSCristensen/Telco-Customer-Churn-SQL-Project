@@ -165,7 +165,7 @@ SELECT
 FROM telco_data
 GROUP BY SeniorCitizen;
     
--- Creating tenure group and analyze churn:
+-- Creating tenure groups and analyze churn:
 SELECT 
   CASE 
     WHEN tenure < 12 THEN 'Under 1 year'

@@ -36,7 +36,7 @@ The dataset contains 7,043 customers with 21 columns:
 - **Paperless billing**: Showing if the customer receives paperless billing (*Yes*/*No*).
 - **Payment method**: How the customer pays (*Electronic check*, *Mailed check*, *Bank transfer (automatic)*, or *Credit card (automatic)*).
 - **Monthly charges**: The amount the customer is billed each month.
-- **Total charges**: Total amount billed to the customer to date.
+- **Total charges**: The total amount billed to the customer to date.
 - **Churn**: Showing if the customer has left the company (*Yes*/*No*).
 
 ## :bar_chart: EDA 

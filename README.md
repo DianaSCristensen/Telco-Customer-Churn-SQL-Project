@@ -4,7 +4,7 @@ This project analyzes customer churn behavior in the telecom industry, data prov
 
 - 📂 Dataset used in this project is available via Kaggle: \
  <a href="https://www.kaggle.com/datasets/blastchar/telco-customer-churn"> Telco Customer Churn - BlastChar </a>
-- 🛠️ Tools used: MySQL, DbGate and MySQL Workbench
+- 🛠️ Tools used: MySQL Workbench and DbGate.
 - 📗 Full SQL code can be found in the SQL folder: \
   [Complete analysis](SQL/complete_analysis.sql)
 - :pushpin: Part 2 of the project is still in progress, but will be posted here:\

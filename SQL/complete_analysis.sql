@@ -86,13 +86,13 @@ FROM telco_data
 GROUP BY Churn; 
 
 -- Revenue lost by churned contracts
-SELECT 
-    Contract,
-    ROUND(SUM(CASE WHEN Churn = 'Yes' THEN TotalCharges ELSE 0 END), 2) AS revenue_lost,
-    ROUND(SUM(TotalCharges), 2) AS total_revenue,
-    ROUND(SUM(CASE WHEN Churn = 'Yes' THEN TotalCharges ELSE 0 END) / SUM(TotalCharges) * 100, 2) AS pct_revenue_lost
+SELECT
+    Contract, 
+    ROUND(SUM(IF(Churn = 'Yes', TotalCharges, 0)), 2) AS revenue_lost, 
+    ROUND(SUM(TotalCharges), 2) AS total_revenue, 
+    ROUND(SUM(IF(Churn = 'Yes', TotalCharges, 0)) / SUM(TotalCharges) * 100, 2) AS pct_revenue_lost 
 FROM telco_data
-GROUP BY Contract;
+GROUP BY Contract; 
 
 -- Churn rate by gender
 SELECT 

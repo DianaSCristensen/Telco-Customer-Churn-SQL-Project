@@ -14,9 +14,9 @@ This project analyses customer churn behavior in the telecom industry, data prov
 The dataset contains 7,043 customers with 21 columns:
 
 - Loaded raw data as VARCHAR.
-- Identified and removed blank spaces ➡️ from `TotalCharges` 11 rows was dropped.
-- Converted `TotalCharges` and `MonthlyCharges` to numeric values ➡️ DECIMAL.
-- Converted `SeniorCitizen` to binary numeric  ➡️ TINYINT(1).
+- Identified and removed blank spaces from *Total charges*, 11 rows was dropped.
+- Converted *Total charges* and *Monthly charges* to numeric values ➡️ DECIMAL.
+- Converted *Senior citizens* to binary numeric ➡️ TINYINT(1).
   
 *Please note, 11 rows with missing TotalCharges were dropped for the SQL EDA but in the ML phase (part 2), these rows will be re-evaluated.*
   

@@ -43,7 +43,7 @@ The dataset contains 7,043 customers with 21 columns:
 
 ### Overall churn rate 
 
-Out of all the customers, 26.6% (1,869 out of 7,032) have churned, meaning nearly 1 in 4 customers have left the company. The majority, 73.4% (5,163 customers), are still active. 
+Out of the all customers, 26.6% (1,869 out of 7,032) have churned, meaning nearly 1 in 4 customers have left the company. The majority, 73.4% (5,163 customers), are still active. 
 
 
 **Revenue lost by churned contracts**
